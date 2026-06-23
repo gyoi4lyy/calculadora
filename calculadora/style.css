@@ -1,0 +1,122 @@
+/* Reset básico: remove margens e define box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fundo da página e centralização */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f9;
+  display: flex;
+  justify-content: center;  /* centraliza horizontalmente */
+  padding-top: 40px;
+}
+
+/* Cartão branco que contém tudo */
+.container {
+  width: 500px;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Título principal */
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+/* Organiza os campos do formulário lado a lado */
+.formulario {
+  display: flex;
+  flex-wrap: wrap;        /* permite quebra de linha se necessário */
+  gap: 10px;              /* espaço entre os campos */
+  margin-bottom: 20px;
+}
+
+/* Estilo comum para todos os campos de entrada */
+.campo {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  flex: 1 1 150px;       /* permite crescer e encolher */
+}
+
+/* Botão principal */
+.btn {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  flex: 1 1 100%;         /* ocupa a linha toda */
+}
+
+/* Efeito quando o mouse passa sobre o botão */
+.btn:hover {
+  background-color: #2980b9;
+}
+
+/* Lista de transações sem marcadores padrão */
+#lista-transacoes {
+  list-style: none;
+  margin: 20px 0;
+}
+
+/* Cada item de transação (aplicado depois via JavaScript) */
+.transacao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Borda lateral verde para receitas */
+.transacao.receita {
+  border-left: 5px solid #27ae60;
+}
+
+/* Borda lateral vermelha para despesas */
+.transacao.despesa {
+  border-left: 5px solid #e74c3c;
+}
+
+/* Área da descrição e valor */
+.info {
+  flex-grow: 1;
+}
+
+/* Botão excluir pequeno */
+.btn-excluir {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Saldo com fonte maior e alinhado à direita */
+.resultado {
+  text-align: right;
+  font-size: 1.5em;
+  color: #2c3e50;
+  margin-top: 10px;
+}
+
+/* Cor verde para saldo positivo (aplicado via JS) */
+#saldo.positivo {
+  color: #27ae60;
+}
+
+/* Cor vermelha para saldo negativo (aplicado via JS) */
+#saldo.negativo {
+  color: #e74c3c;}

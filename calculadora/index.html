@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- Metadados da página -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Orçamento</title>
+  <!-- Liga o arquivo de estilo CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Container principal: centraliza e agrupa o conteúdo -->
+  <div class="container">
+    <h1>💰 Meu Orçamento Mensal</h1>
+
+    <!-- Área de formulário: onde o usuário digita os dados -->
+    <div class="formulario">
+      <!-- Campo de texto: descrição da transação -->
+      <input type="text" id="descricao" placeholder="Ex: Salário, Aluguel" class="campo">
+      <!-- Campo numérico: valor em reais (permite centavos) -->
+      <input type="number" id="valor" placeholder="Valor (R$)" step="0.01" class="campo">
+      <!-- Menu suspenso: tipo da transação -->
+      <select id="tipo" class="campo">
+        <option value="receita">Receita (+)</option>
+        <option value="despesa">Despesa (-)</option>
+      </select>
+      <!-- Botão que adiciona o lançamento -->
+      <button id="btn-adicionar" class="btn">Adicionar</button>
+    </div>
+
+    <h2>Lançamentos</h2>
+    <!-- Lista onde os itens aparecerão (começa vazia) -->
+    <ul id="lista-transacoes">
+      <!-- Itens serão criados pelo JavaScript -->
+    </ul>
+
+    <!-- Exibição do saldo final -->
+    <div class="resultado">
+      <h3>Saldo: <span id="saldo">R$ 0,00</span></h3>
+    </div>
+  </div>
+
+  <!-- Liga o arquivo JavaScript ao final do body -->
+  <script src="script.js"></script>
+</body>
+</html>
